@@ -19,7 +19,7 @@ spec:
           image: brianbwire/brian-yolo-backend:v1.0.0
           command: ["npm", "start"] 
           ports:
-            - containerPort: 5000
+            - containerPort: 4000
           resources:
             limits:
               memory: "256Mi"
@@ -38,7 +38,7 @@ spec:
     app: backend
   ports:
     - protocol: TCP
-      port: 5000
-      targetPort: 5000
+      port: 4000
+      targetPort: 4000
       nodePort: 30100
   

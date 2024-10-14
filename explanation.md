@@ -81,7 +81,7 @@ COPY . .
 ENV NODE_ENV=production
 
 # Expose the port used by the app
-EXPOSE 5000
+EXPOSE 4000
 
 # Prune the node_modules directory to remove development dependencies and clears the npm cache and removes any temporary files
 RUN npm prune --production && \
@@ -102,7 +102,7 @@ services:
   backend:
     # ...
     ports:
-      - "5000:5000"
+      - "4000:4000"
     networks:
       - yolo-network
 
