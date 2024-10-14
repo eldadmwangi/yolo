@@ -11,24 +11,24 @@ version: "3.8"
 services:
 
   #Builds the frontend Docker image and creates the frontend microservice
-  brian-yolo-client:
-    image: brianbwire/brian-yolo-client:v1.0.0
+  eldad-yolo-client:
+    image: eldadmwangi/eldad-yolo-client:v1.0.0
     build: ./client
-    container_name: brian-yolo-client
+    container_name: eldad-yolo-client
     stdin_open: true
     tty: true
     ports:
       - "3000:3000"
     depends_on: 
-      - brian-yolo-backend
+      - eldad-yolo-backend
     networks:
       - app-net
 
   #Builds the backend Docker image and creates the backend microservice
-  brian-yolo-backend:
-    image: brianbwire/brian-yolo-backend:v1.0.0
+  eldad-yolo-backend:
+    image: eldadmwangi/eldad-yolo-backend:v1.0.0
     build: ./backend
-    container_name: brian-yolo-backend
+    container_name: eldad-yolo-backend
     stdin_open: true
     tty: true
     restart: always
