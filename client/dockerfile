@@ -30,6 +30,8 @@ COPY --from=build-stage /client/public ./public
 COPY --from=build-stage /client/src ./src
 COPY --from=build-stage /client/package*.json ./
 
+RUN npm install webpack@latest react-scripts@latest
+
 # Set the environment variable for the app
 ENV NODE_ENV=production
 
