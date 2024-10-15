@@ -61,3 +61,5 @@ View Logs: docker-compose logs <service-name>
 Access the Application
 Frontend: http://localhost:3000
 Backend: http://localhost:4000
+
+![alt text](yolo.png)
