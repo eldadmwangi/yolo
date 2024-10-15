@@ -9,7 +9,7 @@ Install the docker engine here:
 ## How to launch the application 
 
 
-![Alt text](image.png)
+![alt text](yolo.png)
 
 ## How to run the app
 Use vagrant up --provison command
@@ -61,5 +61,3 @@ View Logs: docker-compose logs <service-name>
 Access the Application
 Frontend: http://localhost:3000
 Backend: http://localhost:4000
-
-![alt text](yolo.png)
