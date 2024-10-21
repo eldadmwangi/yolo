@@ -14,7 +14,6 @@ Install the docker engine here:
 ## How to run the app
 Use vagrant up --provison command
 
-
 # Summary Notes for Docker Compose Setup
 Docker Compose File:
 
