@@ -25,6 +25,7 @@ services:
       - app-net
 
   #Builds the backend Docker image and creates the backend microservice
+  #Backend runs locally on port 4000 instead of 5000 for mac, hence the change
   eldad-yolo-backend:
     image: eldadmwangi/eldad-yolo-backend:v1.0.0
     build: ./backend
