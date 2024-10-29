@@ -37,3 +37,22 @@ variable "image_project" {
   type        = string
   default     = "ubuntu-os-cloud" # Default project for Ubuntu images
 }
+
+# Docker image variables
+variable "backend_image" {
+  description = "Docker image for the backend application"
+  type        = string
+  default     = "eldadmwangi/eldad-yolo-backend:v1.0.0"
+}
+
+variable "client_image" {
+  description = "Docker image for the client application"
+  type        = string
+  default     = "eldadmwangi/eldad-yolo-client:v1.0.0"
+}
+
+variable "database_image" {
+  description = "Docker image for the database (MongoDB)"
+  type        = string
+  default     = "mongo:latest"
+}
