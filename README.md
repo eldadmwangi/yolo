@@ -11,6 +11,8 @@ Install the docker engine here:
 
 ![alt text](yolo.png)
 
+![alt text](cloud.png)
+
 ## How to run the app
 Use vagrant up --provison command
 

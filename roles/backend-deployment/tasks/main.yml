@@ -13,4 +13,5 @@
     ports:
       - "4000:4000"
     command: "npm start"
+    restart_policy: unless-stopped
   become: yes
