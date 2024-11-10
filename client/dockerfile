@@ -1,23 +1,28 @@
-FROM node:14-slim   AS build
+# Use an official Node runtime as a parent image
+FROM node:14-slim AS build
 
-WORKDIR /app
+# Set the working directory in the container
+WORKDIR /usr/src/app
 
+# Copy the package.json and package-lock.json files to the container
 COPY package*.json ./
 
+# Install application dependencies
 RUN npm install
 
+# Copy the rest of the application code to the container
 COPY . .
 
-RUN npm run build
-
-FROM node:16-alpine3.16
+FROM alpine:3.16.7
 
 WORKDIR /app
 
-COPY --from=build /app/build ./build
+RUN apk update && apk add npm
 
-RUN npm install -g serve
+COPY --from=build /usr/src/app /app
 
+# Expose the port the app runs on
 EXPOSE 3000
 
-CMD ["serve", "-s", "build", "-l", "3000"]
+# Define the command to run your app
+CMD ["npm", "start"]
