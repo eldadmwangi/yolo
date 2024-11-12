@@ -18,7 +18,7 @@ spec:
       - name: yolo-backend
         image: eldadmwangi/eldad-yolo-backend:v1.0.0
         ports:
-        - containerPort: 8000
+        - containerPort: 4000
         env:
         - name: MONGO_URL
           value: "mongodb://$(MONGO_USERNAME):$(MONGO_PASSWORD)@mongo:27017"

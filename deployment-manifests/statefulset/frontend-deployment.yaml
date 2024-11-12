@@ -21,7 +21,7 @@ spec:
         - containerPort: 80
         env:
         - name: BACKEND_URL
-          value: "http://yolo-backend:8000"
+          value: "http://yolo-backend:4000"
         resources:
           requests:
             memory: "256Mi"
